@@ -6,7 +6,7 @@
     <title>c</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <style media="screen">
-    body{
+    #chart1{
       height: 100vh
     }
     .ct-area {
@@ -16,12 +16,13 @@
     </style>
   </head>
   <body>
+    <div class="ct-chart ct-golden-section" id="chart1"></div>
 
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
 <script>
   // Initialize a Line chart in the container with the ID chart1
-var chart = new Chartist.Line('body',
+var chart = new Chartist.Line('#chart1',
 {labels: [1, 2, 3, 4, 5, 6, 7, 8],series: [[5, 9, 7, 8, 5, 3, 5, 4]]},
 {low: 0,showArea: true}
 );
